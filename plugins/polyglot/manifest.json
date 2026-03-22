@@ -1,0 +1,24 @@
+{
+  "id": "polyglot",
+  "version": "1.0.0",
+  "name": "Coding Polyglot",
+  "tagline": "Test your programming instincts",
+  "description": "Quick code reading challenges across programming languages. Predict what the code outputs to sharpen your understanding of language semantics.",
+  "author": "justinmeimar",
+  "category": "train",
+  "tags": ["coding", "programming", "languages", "challenge"],
+  "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M2 12h20\"/><path d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\"/></svg>",
+  "fields": [
+    { "kind": "select", "key": "focus", "label": "Focus", "options": ["mixed", "gotchas", "idioms", "fundamentals"], "default": "mixed" },
+    { "kind": "boolean", "key": "python", "label": "Python", "default": true },
+    { "kind": "boolean", "key": "javascript", "label": "JavaScript", "default": true },
+    { "kind": "boolean", "key": "typescript", "label": "TypeScript", "default": false },
+    { "kind": "boolean", "key": "rust", "label": "Rust", "default": false },
+    { "kind": "boolean", "key": "go", "label": "Go", "default": false },
+    { "kind": "boolean", "key": "java", "label": "Java", "default": false },
+    { "kind": "boolean", "key": "c", "label": "C", "default": false },
+    { "kind": "boolean", "key": "ruby", "label": "Ruby", "default": false }
+  ],
+  "connectors": [{ "kind": "llm" }],
+  "entry": "src/PolyglotBox.svelte"
+}

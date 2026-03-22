@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "id": "abstract-loading",
+      "version": "1.0.0",
+      "name": "Abstract Loading",
+      "tagline": "Liquid light while you wait",
+      "description": "A mesmerizing abstract animation using WebGL shaders — flowing, iridescent forms inspired by visual music and liquid art.",
+      "author": "justinmeimar",
+      "authorAvatar": "J",
+      "category": "reflect",
+      "tags": ["abstract", "animation", "loading", "visual", "meditative"],
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"9\" cy=\"10\" r=\"6\" fill=\"#7c3aed\" opacity=\"0.6\"/><circle cx=\"15\" cy=\"10\" r=\"6\" fill=\"#06b6d4\" opacity=\"0.6\"/><circle cx=\"12\" cy=\"15\" r=\"6\" fill=\"#ec4899\" opacity=\"0.6\"/></svg>",
+      "verified": true,
+      "downloads": 0,
+      "repository": "https://github.com/justinmeimar/friction-box-plugins"
+    },
+    {
+      "id": "rustlings",
+      "version": "1.0.0",
+      "name": "Rustlings",
+      "tagline": "Learn Rust, one exercise at a time",
+      "description": "An incremental Rust learning game mapped to The Rust Programming Language book. Navigate a skill tree of concepts and solve coding exercises to progress.",
+      "author": "justinmeimar",
+      "authorAvatar": "J",
+      "category": "train",
+      "tags": ["rust", "programming", "learning", "coding"],
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"16 18 22 12 16 6\"/><polyline points=\"8 6 2 12 8 18\"/></svg>",
+      "verified": true,
+      "downloads": 0,
+      "repository": "https://github.com/justinmeimar/friction-box-plugins"
+    },
+    {
+      "id": "polyglot",
+      "version": "1.0.0",
+      "name": "Coding Polyglot",
+      "tagline": "Test your programming instincts",
+      "description": "Quick code reading challenges across programming languages. Predict what the code outputs to sharpen your understanding of language semantics.",
+      "author": "justinmeimar",
+      "authorAvatar": "J",
+      "category": "train",
+      "tags": ["coding", "programming", "languages", "challenge"],
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M2 12h20\"/><path d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\"/></svg>",
+      "verified": true,
+      "downloads": 0,
+      "repository": "https://github.com/justinmeimar/friction-box-plugins"
+    }
+  ]
+}
