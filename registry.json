@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "plugins": [
     {
       "id": "abstract-loading",
@@ -7,14 +7,22 @@
       "name": "Abstract Loading",
       "tagline": "Liquid light while you wait",
       "description": "A mesmerizing abstract animation using WebGL shaders — flowing, iridescent forms inspired by visual music and liquid art.",
-      "author": "justinmeimar",
+      "author": "justinvidual",
       "authorAvatar": "J",
       "category": "reflect",
       "tags": ["abstract", "animation", "loading", "visual", "meditative"],
       "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"9\" cy=\"10\" r=\"6\" fill=\"#7c3aed\" opacity=\"0.6\"/><circle cx=\"15\" cy=\"10\" r=\"6\" fill=\"#06b6d4\" opacity=\"0.6\"/><circle cx=\"12\" cy=\"15\" r=\"6\" fill=\"#ec4899\" opacity=\"0.6\"/></svg>",
       "verified": true,
       "downloads": 0,
-      "repository": "https://github.com/justinmeimar/friction-box-plugins"
+      "repository": "https://github.com/friction-box-project/box-plugins",
+      "bundle": "https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/abstract-loading/abstract-loading.js",
+      "fields": [
+        { "kind": "number", "key": "duration", "label": "Duration (seconds)", "min": 5, "max": 120, "default": 15 },
+        { "kind": "select", "key": "style", "label": "Style", "options": ["diffusion", "vortex"], "default": "diffusion" },
+        { "kind": "select", "key": "palette", "label": "Palette", "options": ["jupiter", "cosmic", "aurora", "ember", "ocean", "water"], "default": "jupiter" },
+        { "kind": "number", "key": "speed", "label": "Speed", "min": 10, "max": 100, "default": 10 }
+      ],
+      "connectors": []
     },
     {
       "id": "rustlings",
@@ -22,14 +30,17 @@
       "name": "Rustlings",
       "tagline": "Learn Rust, one exercise at a time",
       "description": "An incremental Rust learning game mapped to The Rust Programming Language book. Navigate a skill tree of concepts and solve coding exercises to progress.",
-      "author": "justinmeimar",
+      "author": "justinvidual",
       "authorAvatar": "J",
       "category": "train",
       "tags": ["rust", "programming", "learning", "coding"],
       "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"16 18 22 12 16 6\"/><polyline points=\"8 6 2 12 8 18\"/></svg>",
       "verified": true,
       "downloads": 0,
-      "repository": "https://github.com/justinmeimar/friction-box-plugins"
+      "repository": "https://github.com/friction-box-project/box-plugins",
+      "bundle": "https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/rustlings/rustlings.js",
+      "fields": [],
+      "connectors": []
     },
     {
       "id": "polyglot",
@@ -37,14 +48,27 @@
       "name": "Coding Polyglot",
       "tagline": "Test your programming instincts",
       "description": "Quick code reading challenges across programming languages. Predict what the code outputs to sharpen your understanding of language semantics.",
-      "author": "justinmeimar",
+      "author": "justinvidual",
       "authorAvatar": "J",
       "category": "train",
       "tags": ["coding", "programming", "languages", "challenge"],
       "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M2 12h20\"/><path d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\"/></svg>",
       "verified": true,
       "downloads": 0,
-      "repository": "https://github.com/justinmeimar/friction-box-plugins"
+      "repository": "https://github.com/friction-box-project/box-plugins",
+      "bundle": "https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/polyglot/polyglot.js",
+      "fields": [
+        { "kind": "select", "key": "focus", "label": "Focus", "options": ["mixed", "gotchas", "idioms", "fundamentals"], "default": "mixed" },
+        { "kind": "boolean", "key": "python", "label": "Python", "default": true },
+        { "kind": "boolean", "key": "javascript", "label": "JavaScript", "default": true },
+        { "kind": "boolean", "key": "typescript", "label": "TypeScript", "default": false },
+        { "kind": "boolean", "key": "rust", "label": "Rust", "default": false },
+        { "kind": "boolean", "key": "go", "label": "Go", "default": false },
+        { "kind": "boolean", "key": "java", "label": "Java", "default": false },
+        { "kind": "boolean", "key": "c", "label": "C", "default": false },
+        { "kind": "boolean", "key": "ruby", "label": "Ruby", "default": false }
+      ],
+      "connectors": [{ "kind": "llm" }]
     }
   ]
 }
