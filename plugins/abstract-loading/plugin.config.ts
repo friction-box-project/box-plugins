@@ -1,0 +1,20 @@
+import { definePlugin, defineField } from '@friction-box/sdk';
+
+export default definePlugin({
+	id: 'abstract-loading',
+	version: '1.0.0',
+	name: 'Abstract Loading',
+	tagline: 'Liquid light while you wait',
+	description: 'A mesmerizing abstract animation using WebGL shaders — flowing, iridescent forms inspired by visual music and liquid art.',
+	author: 'justinvidual',
+	category: 'reflect',
+	tags: ['abstract', 'animation', 'loading', 'visual', 'meditative'],
+	icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="10" r="6" fill="#7c3aed" opacity="0.6"/><circle cx="15" cy="10" r="6" fill="#06b6d4" opacity="0.6"/><circle cx="12" cy="15" r="6" fill="#ec4899" opacity="0.6"/></svg>`,
+	component: 'src/AbstractLoadingBox.svelte',
+	fields: [
+		defineField.number({ key: 'duration', label: 'Duration (seconds)', min: 5, max: 120, default: 15 }),
+		defineField.select({ key: 'style', label: 'Style', options: ['diffusion', 'vortex'], default: 'diffusion' }),
+		defineField.select({ key: 'palette', label: 'Palette', options: ['jupiter', 'cosmic', 'aurora', 'ember', 'ocean', 'water'], default: 'jupiter' }),
+		defineField.number({ key: 'speed', label: 'Speed', min: 10, max: 100, default: 10 }),
+	],
+});

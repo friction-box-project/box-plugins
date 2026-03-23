@@ -1,3 +1,4 @@
 node_modules/
 bun.lock
-.tmp-entries/
+plugins/*/dist/
+.frictionbox-tmp/

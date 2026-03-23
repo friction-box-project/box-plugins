@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
-	import type { BoxContext } from '$shared/types';
+	import type { BoxContext } from '@friction-box/sdk';
 	import {
 		NODES, EDGES, EXERCISES, STARS, VIEWBOX,
 		getNode, nodeStatus, nextAvailable, edgePath,

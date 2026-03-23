@@ -21942,13 +21942,13 @@ class Kg {
     t.drawingBufferColorSpace = Ge._getDrawingBufferColorSpace(e), t.unpackColorSpace = Ge._getUnpackColorSpace();
   }
 }
-var Zg = /* @__PURE__ */ Af('<main class="svelte-1mekf2t"><button><canvas class="svelte-1mekf2t"></canvas> <div><span class="svelte-1mekf2t"> </span></div></button></main>');
+var Zg = /* @__PURE__ */ Af('<main class="svelte-k2m300"><button><canvas class="svelte-k2m300"></canvas> <div><span class="svelte-k2m300"> </span></div></button></main>');
 const $g = {
-  hash: "svelte-1mekf2t",
-  code: `main.svelte-1mekf2t {margin:0;padding:0;width:100vw;height:100vh;overflow:hidden;}.wrap.svelte-1mekf2t {position:relative;display:block;width:100%;height:100%;border:none;padding:0;margin:0;background:#0a0a0a;cursor:default;transition:opacity 0.7s ease;}.wrap.svelte-1mekf2t:not(:disabled) {cursor:pointer;}.wrap.completing.svelte-1mekf2t {opacity:0;pointer-events:none;}canvas.svelte-1mekf2t {display:block;width:100%;height:100%;}.continue.svelte-1mekf2t {position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-        animation: svelte-1mekf2t-fadeIn 1.2s ease both;}.continue.completing.svelte-1mekf2t {opacity:0;transition:opacity 0.5s ease;}.continue.svelte-1mekf2t span:where(.svelte-1mekf2t) {padding:10px 28px;border-radius:24px;background:rgba(0, 0, 0, 0.35);backdrop-filter:blur(12px);color:rgba(255, 255, 255, 0.7);font:300 13px system-ui, sans-serif;letter-spacing:0.35em;pointer-events:none;}
+  hash: "svelte-k2m300",
+  code: `main.svelte-k2m300 {margin:0;padding:0;width:100vw;height:100vh;overflow:hidden;}.wrap.svelte-k2m300 {position:relative;display:block;width:100%;height:100%;border:none;padding:0;margin:0;background:#0a0a0a;cursor:default;transition:opacity 0.7s ease;}.wrap.svelte-k2m300:not(:disabled) {cursor:pointer;}.wrap.completing.svelte-k2m300 {opacity:0;pointer-events:none;}canvas.svelte-k2m300 {display:block;width:100%;height:100%;}.continue.svelte-k2m300 {position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+        animation: svelte-k2m300-fadeIn 1.2s ease both;}.continue.completing.svelte-k2m300 {opacity:0;transition:opacity 0.5s ease;}.continue.svelte-k2m300 span:where(.svelte-k2m300) {padding:10px 28px;border-radius:24px;background:rgba(0, 0, 0, 0.35);backdrop-filter:blur(12px);color:rgba(255, 255, 255, 0.7);font:300 13px system-ui, sans-serif;letter-spacing:0.35em;pointer-events:none;}
 
-    @keyframes svelte-1mekf2t-fadeIn {
+    @keyframes svelte-k2m300-fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
     }`
@@ -22135,7 +22135,7 @@ void main() {
   let S;
   var b = Lr(h), y = Lr(b);
   ff(() => {
-    M = Yo(g, 1, "wrap svelte-1mekf2t", null, M, { completing: Tt(l) === "completing" }), g.disabled = Tt(l) === "running", S = Yo(h, 1, "continue svelte-1mekf2t", null, S, { completing: Tt(l) === "completing" }), Rf(y, Tt(l) === "running" ? "LOADING" : "CONTINUE");
+    M = Yo(g, 1, "wrap svelte-k2m300", null, M, { completing: Tt(l) === "completing" }), g.disabled = Tt(l) === "running", S = Yo(h, 1, "continue svelte-k2m300", null, S, { completing: Tt(l) === "completing" }), Rf(y, Tt(l) === "running" ? "LOADING" : "CONTINUE");
   }), Mf("click", g, f), wf(n, m), Kl();
 }
 Sf(["click"]);

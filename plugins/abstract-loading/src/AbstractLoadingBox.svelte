@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import * as THREE from 'three';
-    import type { BoxContext } from '$shared/types';
+    import type { BoxContext } from '@friction-box/sdk';
 
     let { ctx }: { ctx: BoxContext } = $props();
 

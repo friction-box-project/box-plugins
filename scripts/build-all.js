@@ -1,60 +1,36 @@
-import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'fs';
-import { build } from 'vite';
-import { svelte } from '@sveltejs/vite-plugin-svelte';
+import { readdirSync, readFileSync, writeFileSync, existsSync, cpSync } from 'fs';
+import { execSync } from 'child_process';
 import { resolve } from 'path';
 
 const pluginsDir = resolve(import.meta.dirname, '../plugins');
-const outDir = resolve(import.meta.dirname, '../dist');
-const tmpDir = resolve(import.meta.dirname, '../.tmp-entries');
+const distDir = resolve(import.meta.dirname, '../dist');
+const registryPath = resolve(import.meta.dirname, '../registry.json');
 
-mkdirSync(tmpDir, { recursive: true });
+const pluginDirs = readdirSync(pluginsDir, { withFileTypes: true })
+	.filter(d => d.isDirectory() && existsSync(resolve(pluginsDir, d.name, 'plugin.config.ts')));
 
-const plugins = readdirSync(pluginsDir, { withFileTypes: true })
-	.filter(d => d.isDirectory())
-	.map(d => {
-		const manifest = JSON.parse(
-			readFileSync(resolve(pluginsDir, d.name, 'manifest.json'), 'utf-8')
-		);
-		return {
-			id: d.name,
-			componentPath: resolve(pluginsDir, d.name, manifest.entry),
-		};
-	});
+const registryEntries = [];
 
-for (const plugin of plugins) {
-	console.log(`Building ${plugin.id}...`);
+for (const dir of pluginDirs) {
+	const pluginPath = resolve(pluginsDir, dir.name);
+	console.log(`\nBuilding ${dir.name}...`);
+	execSync('bunx frictionbox build --registry', { cwd: pluginPath, stdio: 'inherit' });
 
-	const wrapperPath = resolve(tmpDir, `${plugin.id}-entry.js`);
-	writeFileSync(wrapperPath, [
-		`import { mount, unmount } from 'svelte';`,
-		`import Component from '${plugin.componentPath}';`,
-		`export function mountPlugin(target, props) {`,
-		`  return mount(Component, { target, props });`,
-		`}`,
-		`export function unmountPlugin(instance) {`,
-		`  unmount(instance);`,
-		`}`,
-	].join('\n'));
+	const manifest = JSON.parse(readFileSync(resolve(pluginPath, 'dist', 'manifest.json'), 'utf-8'));
+	const bundleName = `${manifest.id}.js`;
 
-	await build({
-		plugins: [svelte({ compilerOptions: { css: 'injected' } })],
-		build: {
-			lib: {
-				entry: wrapperPath,
-				formats: ['es'],
-				fileName: () => `${plugin.id}.js`,
-			},
-			outDir: resolve(outDir, plugin.id),
-			emptyOutDir: true,
-			minify: true,
-		},
-		resolve: {
-			alias: {
-				'$shared': resolve(import.meta.dirname, '../shared'),
-			},
-		},
-	});
-	console.log(`  → dist/${plugin.id}/${plugin.id}.js`);
+	cpSync(
+		resolve(pluginPath, 'dist', bundleName),
+		resolve(distDir, manifest.id, bundleName),
+	);
+
+	const entry = JSON.parse(readFileSync(resolve(pluginPath, 'dist', 'registry-entry.json'), 'utf-8'));
+	entry.bundle = `https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/${manifest.id}/${bundleName}`;
+	entry.verified = true;
+	registryEntries.push(entry);
 }
 
-console.log('Done.');
+const registry = { version: 2, plugins: registryEntries };
+writeFileSync(registryPath, JSON.stringify(registry, null, 2) + '\n');
+
+console.log(`\nUpdated registry.json with ${registryEntries.length} plugin(s).`);
