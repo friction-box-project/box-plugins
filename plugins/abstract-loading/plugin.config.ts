@@ -2,7 +2,6 @@ import { definePlugin, defineField } from '@friction-box/sdk';
 
 export default definePlugin({
 	id: 'abstract-loading',
-	version: '1.0.0',
 	name: 'Abstract Loading',
 	tagline: 'Liquid light while you wait',
 	description: 'A mesmerizing abstract animation using WebGL shaders — flowing, iridescent forms inspired by visual music and liquid art.',
