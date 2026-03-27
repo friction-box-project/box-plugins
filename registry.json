@@ -60,9 +60,6 @@
       "connectors": [],
       "integrity": "sha256-izVhtEPWkxw3PfugQ2EvOoCtJhrGp/wDRaS+ST+/JDc=",
       "verified": true,
-      "downloads": 0,
-      "authorAvatar": "J",
-      "repository": "",
       "bundle": "https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/abstract-loading/abstract-loading.js"
     }
   ]
