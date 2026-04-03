@@ -37,7 +37,7 @@ for (const pluginPath of pluginPaths) {
 	);
 
 	const entry = JSON.parse(readFileSync(resolve(pluginPath, 'dist', 'registry-entry.json'), 'utf-8'));
-	entry.bundle = `https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/${manifest.id}/${bundleName}`;
+	entry.bundle = `https://raw.githubusercontent.com/open-friction/box-plugins/main/dist/${manifest.id}/${bundleName}`;
 	entry.verified = true;
 	registryEntries.push(entry);
 }

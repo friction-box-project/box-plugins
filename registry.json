@@ -22,7 +22,7 @@
       "downloads": 0,
       "authorAvatar": "J",
       "repository": "",
-      "bundle": "https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/rustlings/rustlings.js"
+      "bundle": "https://raw.githubusercontent.com/open-friction/box-plugins/main/dist/rustlings/rustlings.js"
     },
     {
       "id": "memory-match",
@@ -60,7 +60,7 @@
       "downloads": 0,
       "authorAvatar": "F",
       "repository": "",
-      "bundle": "https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/memory-match/memory-match.js"
+      "bundle": "https://raw.githubusercontent.com/open-friction/box-plugins/main/dist/memory-match/memory-match.js"
     },
     {
       "id": "abstract-loading",
@@ -125,7 +125,7 @@
       "downloads": 0,
       "authorAvatar": "J",
       "repository": "",
-      "bundle": "https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/abstract-loading/abstract-loading.js"
+      "bundle": "https://raw.githubusercontent.com/open-friction/box-plugins/main/dist/abstract-loading/abstract-loading.js"
     },
     {
       "id": "polyglot",
@@ -213,7 +213,7 @@
       "downloads": 0,
       "authorAvatar": "J",
       "repository": "",
-      "bundle": "https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/polyglot/polyglot.js"
+      "bundle": "https://raw.githubusercontent.com/open-friction/box-plugins/main/dist/polyglot/polyglot.js"
     }
   ]
 }
