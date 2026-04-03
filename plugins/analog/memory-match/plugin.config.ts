@@ -9,7 +9,6 @@ export default definePlugin({
 	author: 'frictionbox',
 	category: 'remember',
 	tags: ['memory', 'cards', 'concentration', 'matching', 'brain'],
-	icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="8" height="10" rx="1.5"/><rect x="14" y="3" width="8" height="10" rx="1.5"/><rect x="8" y="11" width="8" height="10" rx="1.5"/></svg>',
 	componentPath: 'src/MemoryMatchBox.svelte',
 	fields: [
 		defineField.select({

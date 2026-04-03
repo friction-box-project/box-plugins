@@ -9,7 +9,6 @@ export default definePlugin({
 	author: 'justinvidual',
 	category: 'reflect',
 	tags: ['abstract', 'animation', 'loading', 'visual', 'meditative'],
-	icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="10" r="6" fill="#7c3aed" opacity="0.6"/><circle cx="15" cy="10" r="6" fill="#06b6d4" opacity="0.6"/><circle cx="12" cy="15" r="6" fill="#ec4899" opacity="0.6"/></svg>`,
 	componentPath: 'src/AbstractLoadingBox.svelte',
 	fields: [
 		defineField.number({ key: 'duration', label: 'Duration (seconds)', min: 5, max: 120, default: 15 }),
