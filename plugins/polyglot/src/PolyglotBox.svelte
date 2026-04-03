@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { BoxContext, ResponseSchema } from '@friction-box/sdk';
+	import type { BoxContext, ResponseSchema } from '@open-friction/sdk';
 
 	let { ctx }: { ctx: BoxContext } = $props();
 

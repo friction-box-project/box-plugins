@@ -7,7 +7,7 @@
     "build": "bun scripts/build-all.js"
   },
   "devDependencies": {
-    "@friction-box/sdk": "file:../sdk"
+    "@open-friction/sdk": "file:../sdk"
   },
   "dependencies": {
     "three": "^0.183.2"

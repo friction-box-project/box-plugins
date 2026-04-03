@@ -1,5 +1,69 @@
 {
+  "version": 2,
   "plugins": [
+    {
+      "id": "rustlings",
+      "name": "Rustlings",
+      "tagline": "Learn Rust, one exercise at a time",
+      "description": "An incremental Rust learning game mapped to The Rust Programming Language book. Navigate a skill tree of concepts and solve coding exercises to progress.",
+      "author": "justinvidual",
+      "category": "train",
+      "tags": [
+        "rust",
+        "programming",
+        "learning",
+        "coding"
+      ],
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"16 18 22 12 16 6\"/><polyline points=\"8 6 2 12 8 18\"/></svg>",
+      "fields": [],
+      "connectors": [],
+      "integrity": "sha256-ee7jMULX/7p1GvKLxYbAE9n4SdBq4tqpJT0Tq6svjJw=",
+      "version": "1.0.0",
+      "verified": true,
+      "downloads": 0,
+      "authorAvatar": "J",
+      "repository": "",
+      "bundle": "https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/rustlings/rustlings.js"
+    },
+    {
+      "id": "memory-match",
+      "name": "Memory Match",
+      "tagline": "Find matching pairs to earn access",
+      "description": "A classic concentration card game. Flip cards and find all matching pairs. Tests and improves your short-term memory with each visit.",
+      "author": "frictionbox",
+      "category": "remember",
+      "tags": [
+        "memory",
+        "cards",
+        "concentration",
+        "matching",
+        "brain"
+      ],
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"3\" width=\"8\" height=\"10\" rx=\"1.5\"/><rect x=\"14\" y=\"3\" width=\"8\" height=\"10\" rx=\"1.5\"/><rect x=\"8\" y=\"11\" width=\"8\" height=\"10\" rx=\"1.5\"/></svg>",
+      "fields": [
+        {
+          "kind": "select",
+          "key": "pairs",
+          "label": "Number of pairs",
+          "options": [
+            "4",
+            "6",
+            "8",
+            "10",
+            "12"
+          ],
+          "default": "6"
+        }
+      ],
+      "connectors": [],
+      "integrity": "sha256-4DYYX6iXYHxqVzIHWjf9a3UOfaEihRyBUErBMsFAXN0=",
+      "version": "0.1.0",
+      "verified": true,
+      "downloads": 0,
+      "authorAvatar": "F",
+      "repository": "",
+      "bundle": "https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/memory-match/memory-match.js"
+    },
     {
       "id": "abstract-loading",
       "name": "Abstract Loading",
@@ -59,8 +123,101 @@
       ],
       "connectors": [],
       "integrity": "sha256-izVhtEPWkxw3PfugQ2EvOoCtJhrGp/wDRaS+ST+/JDc=",
+      "version": "0.1.0",
       "verified": true,
+      "downloads": 0,
+      "authorAvatar": "J",
+      "repository": "",
       "bundle": "https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/abstract-loading/abstract-loading.js"
+    },
+    {
+      "id": "polyglot",
+      "name": "Coding Polyglot",
+      "tagline": "Test your programming instincts",
+      "description": "Quick code reading challenges across programming languages. Predict what the code outputs to sharpen your understanding of language semantics.",
+      "author": "justinvidual",
+      "category": "train",
+      "tags": [
+        "coding",
+        "programming",
+        "languages",
+        "challenge"
+      ],
+      "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M2 12h20\"/><path d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\"/></svg>",
+      "fields": [
+        {
+          "kind": "select",
+          "key": "focus",
+          "label": "Focus",
+          "options": [
+            "mixed",
+            "gotchas",
+            "idioms",
+            "fundamentals"
+          ],
+          "default": "mixed"
+        },
+        {
+          "kind": "boolean",
+          "key": "python",
+          "label": "Python",
+          "default": true
+        },
+        {
+          "kind": "boolean",
+          "key": "javascript",
+          "label": "JavaScript",
+          "default": true
+        },
+        {
+          "kind": "boolean",
+          "key": "typescript",
+          "label": "TypeScript",
+          "default": false
+        },
+        {
+          "kind": "boolean",
+          "key": "rust",
+          "label": "Rust",
+          "default": false
+        },
+        {
+          "kind": "boolean",
+          "key": "go",
+          "label": "Go",
+          "default": false
+        },
+        {
+          "kind": "boolean",
+          "key": "java",
+          "label": "Java",
+          "default": false
+        },
+        {
+          "kind": "boolean",
+          "key": "c",
+          "label": "C",
+          "default": false
+        },
+        {
+          "kind": "boolean",
+          "key": "ruby",
+          "label": "Ruby",
+          "default": false
+        }
+      ],
+      "connectors": [
+        {
+          "kind": "llm"
+        }
+      ],
+      "integrity": "sha256-9PlOGcVqvRtQyhWsZrw8rky2cEQE6JBpKQ8Dc977lQQ=",
+      "version": "1.0.0",
+      "verified": true,
+      "downloads": 0,
+      "authorAvatar": "J",
+      "repository": "",
+      "bundle": "https://raw.githubusercontent.com/friction-box-project/box-plugins/main/dist/polyglot/polyglot.js"
     }
   ]
 }

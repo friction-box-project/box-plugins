@@ -6,14 +6,26 @@ const pluginsDir = resolve(import.meta.dirname, '../plugins');
 const distDir = resolve(import.meta.dirname, '../dist');
 const registryPath = resolve(import.meta.dirname, '../registry.json');
 
-const pluginDirs = readdirSync(pluginsDir, { withFileTypes: true })
-	.filter(d => d.isDirectory() && existsSync(resolve(pluginsDir, d.name, 'plugin.config.ts')));
+function findPlugins(dir) {
+	const entries = readdirSync(dir, { withFileTypes: true }).filter(d => d.isDirectory());
+	const found = [];
+	for (const entry of entries) {
+		const full = resolve(dir, entry.name);
+		if (existsSync(resolve(full, 'plugin.config.ts'))) {
+			found.push(full);
+		} else {
+			found.push(...findPlugins(full));
+		}
+	}
+	return found;
+}
 
+const pluginPaths = findPlugins(pluginsDir);
 const registryEntries = [];
 
-for (const dir of pluginDirs) {
-	const pluginPath = resolve(pluginsDir, dir.name);
-	console.log(`\nBuilding ${dir.name}...`);
+for (const pluginPath of pluginPaths) {
+	const name = pluginPath.replace(pluginsDir + '/', '');
+	console.log(`\nBuilding ${name}...`);
 	execSync('bunx frictionbox build --registry', { cwd: pluginPath, stdio: 'inherit' });
 
 	const manifest = JSON.parse(readFileSync(resolve(pluginPath, 'dist', 'manifest.json'), 'utf-8'));
