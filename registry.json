@@ -63,6 +63,69 @@
       "bundle": "https://raw.githubusercontent.com/open-friction/box-plugins/main/dist/memory-match/memory-match.js"
     },
     {
+      "id": "speed-cards",
+      "name": "Speed Cards",
+      "tagline": "Memorize the sequence, recall in order",
+      "description": "Cards flip face-up one at a time. Watch the sequence, then recall them in order. A classic memory sport technique that builds real short-term memory skills with every visit.",
+      "author": "frictionbox",
+      "category": "remember",
+      "tags": [
+        "memory",
+        "sequence",
+        "cards",
+        "recall",
+        "speed"
+      ],
+      "fields": [
+        {
+          "kind": "select",
+          "key": "length",
+          "label": "Sequence length",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "default": "4"
+        },
+        {
+          "kind": "select",
+          "key": "showTimeMs",
+          "label": "Card show time",
+          "options": [
+            "600",
+            "800",
+            "1000",
+            "1500",
+            "2000"
+          ],
+          "default": "1000"
+        },
+        {
+          "kind": "select",
+          "key": "deck",
+          "label": "Card deck",
+          "options": [
+            "emoji",
+            "numbers",
+            "letters"
+          ],
+          "default": "emoji"
+        }
+      ],
+      "connectors": [],
+      "integrity": "sha256-fzW7GtNMEC4c0LSNjBli+gEwXPqmVmB63jlTsimKY5s=",
+      "version": "0.1.0",
+      "verified": true,
+      "downloads": 0,
+      "authorAvatar": "F",
+      "repository": "",
+      "bundle": "https://raw.githubusercontent.com/open-friction/box-plugins/main/dist/speed-cards/speed-cards.js"
+    },
+    {
       "id": "abstract-loading",
       "name": "Abstract Loading",
       "tagline": "Liquid light while you wait",
