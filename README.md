@@ -1,6 +1,6 @@
 # friction-box-plugins
 
-Third-party FrictionBox plugins by [justinmeimar](https://github.com/justinmeimar).
+FrictionBox native plugins
 
 ## Plugins
 
