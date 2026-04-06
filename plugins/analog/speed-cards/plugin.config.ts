@@ -9,6 +9,7 @@ export default definePlugin({
 	author: 'frictionbox',
 	category: 'remember',
 	tags: ['memory', 'sequence', 'cards', 'recall', 'speed'],
+	icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="16" rx="2"/><rect x="4" y="5" width="12" height="16" rx="2" opacity="0.4"/><path d="M10 10l2-2 2 2"/></svg>`,
 	componentPath: 'src/SpeedCardsBox.svelte',
 	fields: [
 		defineField.select({
